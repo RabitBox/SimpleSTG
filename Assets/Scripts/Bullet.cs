@@ -6,7 +6,7 @@ public class Bullet : BaseBullet
 {
 	protected override void Move()
 	{
-		Vector2 _move_direction = this._rect_transform.up * this._speed;
+		Vector2 _move_direction = this._rect_transform.right * this._speed;
 		this._rect_transform.anchoredPosition += _move_direction;
 	}
 
