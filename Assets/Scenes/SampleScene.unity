@@ -363,7 +363,6 @@ GameObject:
   - component: {fileID: 1230034738}
   - component: {fileID: 1230034733}
   - component: {fileID: 1230034732}
-  - component: {fileID: 1230034737}
   m_Layer: 5
   m_Name: Player
   m_TagString: Player
@@ -386,9 +385,7 @@ MonoBehaviour:
   _bullet: {fileID: 1054154360818762, guid: 49578f1359a8f2e4f880046efadeebe5, type: 2}
   _fire_rate: 15
   _data:
-  - create_position: {x: 90, y: 45}
-    angle: 0
-  - create_position: {x: 90, y: -45}
+  - create_position: {x: 90, y: 0}
     angle: 0
 --- !u!114 &1230034733
 MonoBehaviour:
@@ -454,25 +451,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1230034731}
---- !u!114 &1230034737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114608121604812350, guid: 4dc12aff76e4d2549b5eaf7c406eb0c1,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1230034731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc051904d7bfedf409ab02259a02d38e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bullet: {fileID: 1540090423472664, guid: a3e6c0c9eeab9594db8c0fed40a3a525, type: 2}
-  _fire_rate: 50
-  _data:
-  - create_position: {x: -60, y: 45}
-    angle: 120
-  - create_position: {x: -60, y: -45}
-    angle: 240
 --- !u!50 &1230034738
 Rigidbody2D:
   serializedVersion: 4
@@ -730,9 +708,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1989119016}
   - component: {fileID: 1989119017}
+  - component: {fileID: 1989119018}
   m_Layer: 5
   m_Name: Manager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -767,6 +746,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemys: []
+--- !u!114 &1989119018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1989119015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00ccdae06e6d6c47a9ae83afc0bb21c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _create_target: {fileID: 1461993067}
+  _particles:
+  - {fileID: 1365015379523694, guid: 8c9a72c0ad4324a49be21f39d034ace6, type: 2}
 --- !u!1 &2139571163
 GameObject:
   m_ObjectHideFlags: 0
