@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// パーティクル生成マネージャ
+// 非ループパーティクルの生成、再生を行う
 public class ParticleManager : SingletonMonoBehavior<ParticleManager>
 {
 	//--------------------------------------------------
@@ -22,8 +24,8 @@ public class ParticleManager : SingletonMonoBehavior<ParticleManager>
 		int _id,				// 生成するパーティクルのID
 		Vector2 _set_position)	// 設定するポジション
 	{
-		// パーティクルのプレハブが存在しているかを確認する
-		if(this._particles.Count <= _id)
+		if(this._particles.Count <= _id             // パーティクルのプレハブが存在しているか
+			|| this._in_hierarchy_objects == null)	// パーティクル管理用テーブルが存在しているか
 		{
 			return false;
 		}
